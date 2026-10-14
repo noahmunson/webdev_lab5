@@ -1,13 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Form</title>
-  </head>
 
-  <body>
-    <header>
-      <h1>Volunteer Form</h1>
-    </header>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Form</title>
+  <style>
+    form {
+      border: 2x solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Volunteer Form</h1>
+  </header>
+  <form action="action_page.php" method="POST">
+    <div>
+      <label for="first_name_field">First Name: </label>
+      <input type="text" id="first_name_field" name="first_name_field" required>
+    </div>
+    <br>
+    <div>
+      <label for="last_name_form">Last Name: </label>
+      <input type="text" id="last_name_form" name="last_name_field" required>
+    </div>
+    <br>
+    <div>
+      <label for="phone_field">Phone Number: </label>
+      <input type="tel" id="phone_field" name="phone_field" pattern="[0-9]{3}-[0-9]{3}[0-9]{4}" required>
+    </div>
+    <br>
+    <div>
+      <label for="email_field">Email: </label>
+      <input type="text" id="email_field" name="email_field" required>
+    </div>
+    <br>
+    <div>
+      <label for="gender_field">Gender: </label>
+      <br>
+      <label for="male_button">Male </label>
+      <input type="radio" id="male_button" name="male_button">
+      <label for="female_button">Female </label>
+      <input type="radio" id="female_button" name="female_button">
+      <label for="rather_not_say_button">Rather not Say </label>
+      <input type="radio" id="rather_not_say_button" name="rather_not_say_button">
+    </div>
+    <br>
+    <div>
+      <label for="age_field">Age: </label>
+      <br>
+      <select id="age_field" name="age_field">
+        <option value="under_18">Under 18</option>
+        <option value="over_18">18 or Older</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <h2>Days Available:<h2>
+          <br>
+          <input type="checkbox" name="monday" value="monday">
+          <label for="monday">Monday</label>
+    </div>
+    <div>
+      <input type="hidden" id="hidden_field" name="hidden_field" value="Noah Munson">
+    </div>
+  </form>
+</body>
+
 </html>

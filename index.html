@@ -4,11 +4,6 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Form</title>
-  <style>
-    form {
-      border: 2x solid black;
-    }
-  </style>
 </head>
 
 <body>
@@ -22,13 +17,13 @@
     </div>
     <br>
     <div>
-      <label for="last_name_form">Last Name: </label>
+      <label for="last_name_field">Last Name: </label>
       <input type="text" id="last_name_form" name="last_name_field" required>
     </div>
     <br>
     <div>
       <label for="phone_field">Phone Number: </label>
-      <input type="tel" id="phone_field" name="phone_field" pattern="[0-9]{3}-[0-9]{3}[0-9]{4}" required>
+      <input type="tel" id="phone_field" name="phone_field" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
     </div>
     <br>
     <div>
@@ -40,11 +35,13 @@
       <label for="gender_field">Gender: </label>
       <br>
       <label for="male_button">Male </label>
-      <input type="radio" id="male_button" name="male_button" value="Male">
+      <input type="radio" id="male_button" name="gender_field" value="Male">
+      <br>
       <label for="female_button">Female </label>
-      <input type="radio" id="female_button" name="female_button" value="Female">
+      <input type="radio" id="female_button" name="gender_field" value="Female">
+      <br>
       <label for="rather_not_say_button">Rather not Say </label>
-      <input type="radio" id="rather_not_say_button" name="rather_not_say_button" value="Rather not say">
+      <input type="radio" id="rather_not_say_button" name="gender_field" value="Rather not say">
     </div>
     <br>
     <div>
@@ -81,6 +78,7 @@
           <label for="sunday">Sunday</label>
           <br>
     </div>
+    <br>
     <div>
       <label for="comments_field">Comments:</label>
       <br>
@@ -89,6 +87,7 @@
     <div>
       <input type="hidden" id="hidden_field" name="hidden_field" value="Noah Munson">
     </div>
+    <br>
     <div>
       <input type="submit" value="Submit">
     </div>
